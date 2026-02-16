@@ -75,7 +75,7 @@ def generate_contour_plot(func: TestFunction, path: np.ndarray) -> str:
             x=x_grid,
             y=y_grid,
             z=z,
-            colorscale="Viridis",
+            colorscale="Plasma",
             contours=dict(showlabels=False),
             colorbar=dict(title="f(x)"),
         )
@@ -94,7 +94,10 @@ def generate_contour_plot(func: TestFunction, path: np.ndarray) -> str:
         title=f"{func.name} Contour with Optimization Path",
         xaxis_title="x1",
         yaxis_title="x2",
-        template="plotly_white",
+        template="plotly_dark",
+	paper_bgcolor="#121212",
+	plot_bgcolor="#121212",
+	font=dict(color="white"),
         height=500,
     )
     return fig.to_html(full_html=False, include_plotlyjs="cdn")
@@ -120,7 +123,10 @@ def generate_convergence_plot(values: np.ndarray) -> str:
         title="Convergence Plot",
         xaxis_title="Iteration",
         yaxis_title="Function Value",
-        template="plotly_white",
+        template="plotly_dark",
+	paper_bgcolor="#121212",
+	plot_bgcolor="#121212",
+	font=dict(color="white"),
         height=420,
     )
     return fig.to_html(full_html=False, include_plotlyjs=False)
