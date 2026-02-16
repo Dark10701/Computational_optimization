@@ -1,12 +1,32 @@
 body {
-    background: #f5f7fb;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 .card {
-    border: 0;
-    border-radius: 0.8rem;
+    background-color: #1e1e1e !important;
 }
 
-code {
-    color: #1d4ed8;
+.form-control,
+.form-select {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border: 1px solid #444 !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #6c63ff !important;
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #574fd6;
 }
